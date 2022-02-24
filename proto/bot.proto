@@ -1,0 +1,81 @@
+syntax = "proto3";
+package echo;
+import "google/protobuf/timestamp.proto";
+
+
+
+// The request message containing the user's message.
+message Create {
+    string ticker=1;
+    google.protobuf.Timestamp spot_date=2;
+    float investment_amount=3;
+    float price=4;
+    string bot_id=5;
+    int32 margin=6;
+    bool fraction =7;
+    float tp_multiplier=8;
+    float sl_multiplier=9;
+}
+
+message Hedge {
+    string bot_id=1;
+    string ric=2;
+    float current_price=3;
+    float entry_price=4;
+    float last_share_num=5;
+    float last_hedge_delta=6;
+    float investment_amount=7;
+    float bot_cash_balance=8;
+    float stop_loss_price=9;
+    float take_profit_price=10;
+    google.protobuf.Timestamp expiry=11;
+    float strike=12;
+    float strike_2=13;
+    float margin=14;
+    float fraction=15;
+    float option_price=16;
+    float barrier=17;
+    float current_low_price=18;
+    float current_high_price=19;
+    float ask_price=20;
+    float bid_price=21;
+    google.protobuf.Timestamp trading_day=22;
+}
+
+message Stop {
+  string bot_id=1;
+  string ric=2;
+  float current_price=3;
+  float entry_price=4;
+  float last_share_num=5;
+  float last_hedge_delta=6;
+  float investment_amount=7;
+  float bot_cash_balance=8;
+  float stop_loss_price=9;
+  float take_profit_price=10;
+  google.protobuf.Timestamp expiry=11;
+  float strike=12;
+  float strike_2=13;
+  float margin=14;
+  float fraction=15;
+  float option_price=16;
+  float barrier=17;
+  float current_low_price=18;
+  float current_high_price=19;
+  float ask_price=20;
+  float bid_price=21;
+  google.protobuf.Timestamp trading_day=22;
+}
+
+// The response message containing the original message.
+message EchoReply {
+  string message = 1;
+}
+
+// The echo service definition.
+service Echo {
+  // Echo back reply.
+  rpc CreateBot (Create) returns (EchoReply) {}
+  rpc HedgeBot (Hedge) returns (EchoReply) {}
+  rpc StopBot (Stop) returns (EchoReply) {}
+}

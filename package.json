@@ -1,0 +1,26 @@
+{
+    "name": "@asklora-hk/droid-web-rpc",
+    "version": "1.0.1",
+    "description": "for droid rpc frontend",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/asklora/DROID-V3.git"
+    },
+    "keywords": [
+        "asklora"
+    ],
+    "author": "Rede akbar wijaya",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/asklora/DROID-V3/issues"
+    },
+    "homepage": "https://github.com/asklora/DROID-V3#readme",
+    "dependencies": {
+        "google-protobuf": "^3.19.4",
+        "grpc-web": "^1.3.1"
+    }
+}
