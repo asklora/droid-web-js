@@ -23,6 +23,7 @@ module.exports = class DroidClientWeb {
             minutes,
             second
         );
+        DateFromstring.setMonth(DateFromstring.getMonth()-1)
         let timii = google.Timestamp.fromDate(DateFromstring);
         return timii
     }
