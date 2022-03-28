@@ -1,6 +1,6 @@
 {
     "name": "@asklora-hk/droid-web-rpc",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "for droid rpc frontend",
     "main": "index.js",
     "scripts": {
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/asklora/droid-web-js/tree/v-1.0.3"
+        "url": "git+https://github.com/asklora/droid-web-js/tree/v-1.0.4"
     },
     "keywords": [
         "asklora",
